@@ -1,11 +1,10 @@
-// import the required external libraries
 const express = require("express")
-const { json } = require("body-parser")
-const addToCart = require("./store")
-const getCartItems = require("./store")
-
-// initialize the express application
 const app = express()
+const { json } = require("body-parser")
+const port = 3000
+
+const { addToCart, getCartItems } = require("./store")
+
 app.use(json())
 // this serves all files in the `public` directory
 // and can be used to serve our HTML website
@@ -13,11 +12,10 @@ app.use(express.static("public"))
 // this renders all "ejs" pages within the `views` directory
 app.set("view engine", "ejs")
 
-const port = 3000
-
-// our application can have multiple users, but for now, let's assume there's a single user
-// who has this user name
-const userName = "sample user"
+// start an express server on the given port
+app.listen(port, () => {
+	console.log(`Example app listening at http://localhost:${port}`)
+})
 
 // const path = require('path');
 // const express = require('express');
