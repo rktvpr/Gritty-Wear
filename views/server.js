@@ -5,7 +5,7 @@ const exphbs = require('express-handlebars');
 const { json } = require("body-parser")
 const port = 3000
 
-const { addToCart, getCartItems } = require("./store")
+
 
 app.use(json())
 app.use(express.static("public"))
