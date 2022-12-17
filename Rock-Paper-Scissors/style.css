@@ -1,70 +1,80 @@
 .button {
-    margin-top:370px;
+    margin-top: 370px;
     position: absolute;
-    width:120px;
-    height:50px;
-    border-width:2px;
+    width: 120px;
+    height: 50px;
+    border-width: 2px;
     border-radius: 15px;
     border-style: inset;
     font-size: 20px;
-    font-weight:bold;
+    font-weight: bold;
     color: white;
-    border-color:rgba(0,0,0, 1);
-    background-color: rgba(0,0,0, 0.8);
-    animation:btn;
-    position:relative;
-    animation-duration:3s;
-    animation-fill-mode:relative;
+    border-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: btn;
+    position: relative;
+    animation-duration: 3s;
+    animation-fill-mode: relative;
 }
 
 @keyframes btn {
-    0% {left:-900px;}
-    100%{left:0px;}
+    0% {
+        left: -900px;
+    }
+
+    100% {
+        left: 0px;
+    }
 }
 
-body
-{
-	background-image: url("gritty.jpg");
-    
+body {
+    background-image: url("gritty.jpg");
+
 }
 
 .gamepage {
-    text-align:center;
+    text-align: center;
 }
+
 .checkoutBtn {
     text-align: center;
     position: absolute;
-    width:120px;
-    height:50px;
-    border-width:2px;
+    width: 120px;
+    height: 50px;
+    border-width: 2px;
     border-radius: 15px;
     border-style: inset;
     font-size: 20px;
-    font-weight:bold;
+    font-weight: bold;
     color: white;
-    border-color:rgba(0,0,0, 1);
-    background-color: rgba(0,0,0, 0.8);
+    border-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-h1 {   
+h1 {
     position: relative;
-    color:  white;  
-    animation:headi;
+    color: white;
+    animation: headi;
     animation-duration: 3s;
     animation-fill-mode: forwards;
 }
 
-@keyframes headi{
-0%{top:-50px;}
-100%{top:300px;}
+@keyframes headi {
+    0% {
+        top: -50px;
+    }
+
+    100% {
+        top: 300px;
+    }
 }
 
 .button:hover {
-    background-color:rgb(223, 90, 1);
-    color:rgb(255, 255, 255);
+    background-color: rgb(223, 90, 1);
+    color: rgb(255, 255, 255);
 }
 
 .checkoutBtn:hover {
-    background-color:rgb(223, 90, 1);
-    color:rgb(255, 255, 255);
+    background-color: rgb(223, 90, 1);
+    color: rgb(255, 255, 255);
 }
