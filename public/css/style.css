@@ -57,13 +57,14 @@ body {
 }
 .product {
   display: flex;
+  padding: 2em;
 }
 .description {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-p {
+/* p {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -77,7 +78,7 @@ p {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-}
+} */
 
 .cover-container {
   max-width: 42em;
