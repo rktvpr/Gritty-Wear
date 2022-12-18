@@ -10,12 +10,25 @@ Product.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    category_id: {
+    xsSize: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'category',
-        key: 'id',
-      },
+      allowNUll: false,
+    },
+    sSize: {
+      type: DataTypes.INTEGER,
+      allowNUll: false,
+    },
+    mSize: {
+      type: DataTypes.INTEGER,
+      allowNUll: false,
+    },
+    lSize: {
+      type: DataTypes.INTEGER,
+      allowNUll: false,
+    },
+    xlSize: {
+      type: DataTypes.INTEGER,
+      allowNUll: false,
     },
     price: {
       type: DataTypes.DECIMAL(10,2),
@@ -24,16 +37,11 @@ Product.init(
         isDecimal: true,
       },
     },
-    stock: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      isNumeric: true,
-      defaultValue: 10,
-    },
-    product_name: {
+    pName: {
       type: DataTypes.STRING,
       allowNull: false,
-    }
+    },
+
 
   },
   {
