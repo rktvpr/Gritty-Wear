@@ -1,8 +1,8 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-class Customer extends Model { }
+class Order_item extends Model { }
 
-Customer.init(
+Order_item.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -10,19 +10,19 @@ Customer.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        first_name: {
-            type: DataTypes.STRING,
+        total: {
+            type: DataTypes.DECIMAL,
             allowNUll: false,
         },
-        last_name: {
-            type: DataTypes.STRING,
+        quantity: {
+            type: DataTypes.INTEGER,
             allowNUll: false,
         },
-        email: {
-            type: DataTypes.STRING,
+        product_id: {
+            type: DataTypes.INTEGER,
             allowNUll: false,
         },
-        p_word: {
+        size: {
             type: DataTypes.STRING,
             allowNUll: false,
         },
@@ -32,8 +32,8 @@ Customer.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'customer',
+        modelName: 'order_item',
     }
 );
 
-module.exports = Customer;
+module.exports = Order_item;
