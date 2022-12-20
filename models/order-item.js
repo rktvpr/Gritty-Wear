@@ -22,7 +22,7 @@ Order_item.init(
             type: DataTypes.INTEGER,
             allowNUll: false,
             references: {
-                model: 'Customer',
+                model: 'Product',
                 key: 'id',
             },
         },

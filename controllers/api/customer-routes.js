@@ -56,8 +56,8 @@ router.put('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
   try {
-    const delProduct = await getCustomer(req.params.id);
-    if (!delProduct) {
+    const delCustomer = await getCustomer(req.params.id);
+    if (!delCustomer) {
       res.status(404).json({ message: 'No customer found with this id!' });
       return;
     }

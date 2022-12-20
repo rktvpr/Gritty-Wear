@@ -1,7 +1,7 @@
 const Customer = require('../models/customer');
 
 async function getCustomers() {
-    return await Product.findAll();
+    return await Customer.findAll();
 }
 
 async function createCustomer(customer) {
