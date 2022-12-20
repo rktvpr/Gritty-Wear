@@ -19,7 +19,7 @@ Customer_order.init(
             },
         },
         purchase_date: {
-            type: DataTypes.DATE,
+            type: DataTypes.DATEONLY,
             allowNUll: false,
         },
         o_status: {
