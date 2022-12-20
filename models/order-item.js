@@ -21,6 +21,10 @@ Order_item.init(
         product_id: {
             type: DataTypes.INTEGER,
             allowNUll: false,
+            references: {
+                model: 'Customer',
+                key: 'id',
+            },
         },
         size: {
             type: DataTypes.STRING,

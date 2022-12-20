@@ -13,6 +13,10 @@ Customer_order.init(
         customer_id: {
             type: DataTypes.INTEGER,
             allowNUll: false,
+            references: {
+                model: 'Order_item',
+                key: 'id',
+            },
         },
         purchase_date: {
             type: DataTypes.DATE,
