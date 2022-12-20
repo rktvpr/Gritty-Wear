@@ -15,27 +15,36 @@ function myfunction() {
 function game(computer, user) {
     var results
     if (computer == 'rock' & user == 'rock') {
-        results = 'draw'
+        results = 'Gritty chose ' + computer + " Sorry! no discount code"
+
     } else if (computer == 'rock' & user == 'paper') {
-        results = 'win'
+        results = 'You ' + results + " Gritty chose " + computer + ". Nice! Use this at Checkout for 10% off!!: Gritty10"
+
     } else if (computer == 'rock' & user == 'scissors')
-        results = 'lose'
+        results = 'Gritty chose ' + computer + " Sorry! no discount code"
+
     if (computer == 'paper' & user == 'rock') {
-        results = 'lose'
+        results = 'Gritty chose ' + computer + " Sorry! no discount code"
+
     } else if (computer == 'paper' & user == 'paper') {
-        results = 'draw'
+        results = 'Gritty chose ' + computer + " Sorry! no discount code"
+
     } else if (computer == 'paper' & user == 'scissors')
-        results = 'win'
+        results = 'You ' + results + " Gritty chose " + computer + ". Nice! Use this at Checkout for 10% off!!: Gritty10"
+
     if (computer == 'scissors' & user == 'rock') {
-        results = 'win'
+        results = 'You ' + results + " Gritty chose " + computer + ". Nice! Use this at Checkout for 10% off!!: Gritty10"
+
     } else if (computer == 'scissors' & user == 'paper') {
-        results = 'lose'
+        results = 'Gritty chose ' + computer + " Sorry! no discount code"
+
     } else {
-        results = 'draw'
+        results = 'Gritty chose ' + computer + " Sorry! no discount code!"
     }
-    if (results == 'win') {
-        alert('You ' + results + " Nice! Use this at Checkout for 10% off!!: Gritty10")
-    } else {
-        alert('Gritty chose ' + computer + " Sorry! no discount code")
-    }
+    alert(results)
+    // if (results == 'win') {
+    //     alert('You ' + results + " Gritty chose" + computer + ". Nice! Use this at Checkout for 10% off!!: Gritty10")
+    // } else {
+    //     alert('Gritty chose ' + computer + " Sorry! no discount code")
+    // }
 }
