@@ -32,7 +32,7 @@ Customer_order.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'product',
+        modelName: 'customer_order',
     }
 );
 
