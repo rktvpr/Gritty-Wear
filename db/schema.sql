@@ -37,6 +37,7 @@ CREATE TABLE order_item (
 CREATE TABLE customer_order (
     id INT auto_increment NOT NULL,
     customer_id INT NOT NULL,
+    order_id INT NOT NULL,
     purchase_date DATETIME NOT NULL,
     o_status VARCHAR(50) NOT NULL,
     PRIMARY KEY (id),
