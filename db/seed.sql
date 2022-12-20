@@ -17,8 +17,8 @@ VALUES (72.00, 3, 1, "S"),
        (85.00, 4, 3, "L"),
        (70.00, 4, 4, "XL");
 
-INSERT INTO customer_order (customer_id, order_id, purchase_date, o_status)
-VALUES (1, 1, "2022-01-17", "pending"),
-       (2, 2, "2022-04-10", "delivered"),
-       (3, 3, "2022-12-12", "canceled"),
-       (4, 4, "2022-10-22", "shipped");
+INSERT INTO customer_order (customer_id, purchase_date, o_status)
+VALUES (1, "2022-01-17", "pending"),
+       (2, "2022-04-10", "delivered"),
+       (3, "2022-12-12", "canceled"),
+       (4, "2022-10-22", "shipped");
