@@ -14,7 +14,7 @@ Customer_order.init(
             type: DataTypes.INTEGER,
             allowNUll: false,
             references: {
-                model: 'Order_item',
+                model: 'customer',
                 key: 'id',
             },
         },
