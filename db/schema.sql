@@ -25,7 +25,7 @@ CREATE TABLE customer (
 );
 
 CREATE TABLE order_item (
-    id VARCHAR(36) NOT NULL,
+    id INT auto_increment NOT NULL,
     total DECIMAL NOT NULL,
     quantity INT NOT NULL,
     product_id INT NOT NULL,
