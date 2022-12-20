@@ -50,6 +50,28 @@
                     <h4><span class="currency_sign">$</span>24.00</h4>
                     <section class="description">
                         <p>Rep the best mascot in the land for your tot with the Gritty Toddler T-Shirt (this is actually purchasable at <a href="https://www.philadelphiaindependents.com/shop/gritty-toddler-t-shirt">Philadelphia Independents</a>)</p>
+                        <div class="product-variant">
+                            <label class="product-option">Size: </label>
+                            <select class="product-size-container" id="product-size">
+                                <option class="product-size-value" value="XS" selected="">
+                                    XS
+                                </option>
+                                <option class="product-size-value" value="S" selected="">
+                                    S
+                                </option>
+                                <option class="product-size-value" value="M">
+                                    M
+                                </option>
+                                <option class="product-size-value" value="L">
+                                    L
+                                </option>
+                                <option class="product-size-value" value="XL">
+                                    XL
+                                </option>
+                            </select>
+                            <input id="form1" min="0" name="quantity" value="1" type="number"
+                                class="form-control form-control-sm">
+                        </div>
                     </section>
                     <form action="/create-checkout-session" method="POST">
                         <button type="submit" id="checkout-button">Checkout</button>
