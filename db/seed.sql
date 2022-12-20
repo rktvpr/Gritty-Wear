@@ -1,4 +1,4 @@
-USE gritty_wear_db
+USE gritty_wear_db;
 
 INSERT INTO product (xs_size, s_size, m_size, l_size, xl_size, p_name, price)
 VALUES (50, 100, 100, 100, 50, "Gritty T-Shirt", 28.00),
