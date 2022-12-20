@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -49,10 +50,34 @@
                     <h2>Gritty T-Shirt</h2>
                     <h4><span class="currency_sign">$</span>28.00</h4>
                     <section class="description">
-                        <p>The most beautiful Gritty t-shirt in all the lands! (this is actually purchasable at <a href="https://www.philadelphiaindependents.com/shop/gritty-t-shirt">Philadelphia Independents</a>)</p>
+                        <p>The most beautiful Gritty t-shirt in all the lands! (this is actually purchasable at <a
+                                href="https://www.philadelphiaindependents.com/shop/gritty-t-shirt">Philadelphia
+                                Independents</a>)</p>
+                        <div class="product-variant">
+                            <label class="product-option">Size: </label>
+                            <select class="product-size-container" id="product-size">
+                                <option class="product-size-value" value="XS" selected="">
+                                    XS
+                                </option>
+                                <option class="product-size-value" value="S" selected="">
+                                    S
+                                </option>
+                                <option class="product-size-value" value="M">
+                                    M
+                                </option>
+                                <option class="product-size-value" value="L">
+                                    L
+                                </option>
+                                <option class="product-size-value" value="XL">
+                                    XL
+                                </option>
+                            </select>
+                            <input id="form1" min="0" name="quantity" value="1" type="number"
+                                class="form-control form-control-sm">
+                        </div>
                     </section>
                     <form action="/create-checkout-session" method="POST">
-                        <button type="submit" id="checkout-button">Checkout</button>
+                        <button type="submit" id="checkout-button">Add to Cart</button>
                     </form>
                 </div>
             </div>
