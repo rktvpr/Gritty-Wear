@@ -24,10 +24,10 @@ Come shop at Gritty Wear for the best Gritty gear. Checkout is completed securel
 
 
 ## Contributors
-* [Susan Lee]()
-* [Rahsan Lewis]()
-* [Anne Panagotopulos]()
-* [Rick Welte]()
+* [Susan Lee](https://github.com/s-s-lee)
+* [Rahsan Lewis](https://github.com/RahsanLewis)
+* [Anne Panagotopulos](https://github.com/Aepango)
+* [Rick Welte](https://github.com/rktvpr)
 
 ## License
 [MIT License](https://github.com/rktvpr/Gritty-Wear/blob/main/LICENSE)

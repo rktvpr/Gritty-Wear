@@ -9,6 +9,8 @@ const hbs = exphbs.create()
 
 // Stripe test secret API key.
 // const stripe = require('stripe')('sk_test_51MG6uQDLDUN8zeUqW7DTgO0KCA4oZZfgYrT6TejIgz4j5YPgCpzge9RKFUFP4Li9DxJXQ5atM10L0zAec4SGi0Qn00idlFWD64');
+// https://stripe.com/docs/payments/checkout/discounts
+// const coupon = await stripe.coupons.create({percent_off: 10, duration: 'once'});
 
 // app.post('/create-checkout-session', async (req, res) => {
 //   const session = await stripe.checkout.sessions.create({
@@ -27,6 +29,7 @@ const hbs = exphbs.create()
 //       },
 //     ],
 //     mode: 'payment',
+//     allow_promotion_codes: true,
 //     success_url: `${PORT}/success.html`,
 //     cancel_url: `${PORT}/cancel.html`,
 //   });
