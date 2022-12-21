@@ -30,4 +30,4 @@ Come shop at Gritty Wear for the best Gritty gear. Checkout is completed securel
 * [Rick Welte]()
 
 ## License
-MIT License
+[MIT License](https://github.com/rktvpr/Gritty-Wear/blob/main/LICENSE)
