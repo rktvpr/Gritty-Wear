@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Gritty T-shirt</title>
+    <title>Gritty Toddler T-shirt</title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
     <!-- Custom styles for this template -->
@@ -27,25 +27,23 @@
 
 <body>
     <div class="container d-flex h-100 p-3 mx-auto flex-column">
-        {{header}}
+        {{> header}}
         <div class="container product">
             <div class="row justify-content-center">
                 <div class="col-sm align-self-center">
                     <section class="content">
                         <div class="product_image">
-                            <img src="../assets/images/grittytshirt.jpg"
-                                alt="grey tshirt for adults with a photo of gritty's face and hockey sticks in the background"
+                            <img src="../assets/images/grittytoddler.jpg"
+                                alt="orange tshirt for toddlers with a photo of gritty's face and hockey sticks in the background"
                                 class="primary_image" style="width:80%" />
                         </div>
                     </section>
                 </div>
                 <div class="col-sm align-self-center">
-                    <h2>{{pName}}</h2>
-                    <h4><span class="currency_sign">$</span>{{price}}</h4>
+                    <h2>Gritty Toddler T-Shirt</h2>
+                    <h4><span class="currency_sign">$</span>24.00</h4>
                     <section class="description">
-                        <p>The most beautiful Gritty t-shirt in all the lands! (this is actually purchasable at <a
-                                href="https://www.philadelphiaindependents.com/shop/gritty-t-shirt">Philadelphia
-                                Independents</a>)</p>
+                        <p>Rep the best mascot in the land for your tot with the Gritty Toddler T-Shirt (this is actually purchasable at <a href="https://www.philadelphiaindependents.com/shop/gritty-toddler-t-shirt">Philadelphia Independents</a>)</p>
                         <div class="product-variant">
                             <label class="product-option">Size: </label>
                             <select class="product-size-container" id="product-size">
@@ -70,17 +68,13 @@
                         </div>
                     </section>
                     <form action="/create-checkout-session" method="POST">
-                        <button type="submit" id="checkout-button">Add to Cart</button>
+                        <button type="submit" id="checkout-button">Checkout</button>
                     </form>
                 </div>
             </div>
         </div>
 
-        <footer class="d-flex align-items-center justify-content-center mt-auto">
-            <div class="inner">
-                <p>Group 4's Project 2</p>
-            </div>
-        </footer>
+        {{> footer}}
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

@@ -35,14 +35,14 @@
                     </div>
                     <div class="col">
                         <div class="logo text align-middle">
-                            <a href="index.html" title="Gritty Wear"><h1>Gritty Wear</h1></a>
+                            <a href="/" title="Gritty Wear"><h1>Gritty Wear</h1></a>
                         </div>
                     </div>
                     
                     <div class="col">
                         <nav class="navbar nav-masthead ">
-                            <a class="nav-link" href="products.html">Products</a>
-                            <a class="nav-link" href="cart.html">Cart</a>
+                            <a class="nav-link" href="/products">Products</a>
+                            <a class="nav-link" href="/cart">Cart</a>
                         </nav>
                     </div>
                 </div>            
@@ -54,41 +54,41 @@
                 <div class="col-sm-9">
                     <section class="content">
                         <div class="product_image">
-                            <a href="./product1.html"><img src="../assets/images/grittytshirt.jpg"
+                            <a href="/product1"><img src="../assets/images/grittytshirt.jpg"
                                 alt="grey tshirt for adults with a photo of gritty's face and hockey sticks in the background"
                                 class="primary_image" style="width:80%" /></a>
                         </div>
-                        <h4>{{product.pName}}</h4>
-                        <p><span class="currency_sign">$</span>{{product.price}}</p>
+                        <h4>{{pName}}</h4>
+                        <p><span class="currency_sign">$</span>{{price}}</p>
                     </section>
                 </div>
                 <div class="col-sm-4">
                     <section class="content">
                         <div class="product_image">
-                            <a href="./product2.html"><img src="../assets/images/grittytoddler.jpg"
+                            <a href="/product2"><img src="../assets/images/grittytoddler.jpg"
                                 alt="orange tshirt for toddlers with a photo of gritty's face and hockey sticks in the background"
                                 class="primary_image" style="width:80%" /></a>
                         </div>
-                        <h4>{{product.pName}}</h4>
-                        <p><span class="currency_sign">$</span>{{product.price}}</p>
+                        <h4>{{pName}}</h4>
+                        <p><span class="currency_sign">$</span>{{price}}</p>
                     </section>
                 </div>
                 <div class="col-sm-4">
                     <section class="content">
                         <div class="product_image">
-                            <a href="./product3.html"><img src="../assets/images/grittyonesie.jpg"
+                            <a href="/product3"><img src="../assets/images/grittyonesie.jpg"
                                 alt="orange onesie for babies with a photo of gritty's face and hockey sticks in the background"
                                 class="primary_image" style="width:80%" /></a>
                         </div>
-                        <h4>{{product.pName}}</h4>
-                        <p><span class="currency_sign">$</span>{{product.price}}</p>
+                        <h4>{{pName}}</h4>
+                        <p><span class="currency_sign">$</span>{{price}}</p>
                     </section>
                 </div>
                 {{!-- {{/each}} --}}
             </div>
           </div>
 
-        {{footer}}
+        {{> footer}}
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
