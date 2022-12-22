@@ -34,27 +34,6 @@ const hbs = exphbs.create()
 //   res.redirect(303, session.url);
 // });
 // handlebars middleware setup
-app.engine('handlebars', hbs.engine)
-app.set('view engine', 'handlebars')
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-// set static folder
-app.use(express.static(path.join(__dirname, 'public')))
-app.use(controllers);
-
-// handlebars routes
-app.get('/', (req, res) => {
-  res.render('home');
-});
-app.get('/products', (req, res) => {
-  res.render('products');
-});
-
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}!`);
-  sequelize.sync({ force: false });
-});
-
 const sess = {
   secret: 'Super secret secret',
   cookie: {
@@ -75,12 +54,36 @@ app.use(session(sess));
 app.engine('handlebars', hbs.engine)
 app.set('view engine', 'handlebars')
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')))
-app.use(controllers);
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(require('./controllers/store-routes'));
 
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}!`);
-  sequelize.sync({ force: false });
+app.use(express.static('public'));
+
+app.post('/create-checkout-session', async (req, res) => {
+  const session = await stripe.checkout.sessions.create({
+    customer_email: 'customer@example.com',
+    submit_type: 'donate',
+    billing_address_collection: 'auto',
+    shipping_address_collection: {
+      allowed_countries: ['US', 'CA'],
+    },
+    line_items: [
+      {
+        // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
+        price: 'price_1MG6wZDLDUN8zeUqcwmGk7uX',
+        quantity: 1,
+      },
+    ],
+    mode: 'payment',
+    success_url: `${PORT}/success.html`,
+    cancel_url: `${PORT}/cancel.html`,
+  });
+
+  res.redirect(303, session.url);
+});
+
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
 });
