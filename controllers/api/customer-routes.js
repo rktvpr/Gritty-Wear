@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { getCustomers, createCustomer, getCustomer, updateCustomer, deleteCustomer } = require("../../repository/customerRepository")
 
-// The `/api/products` endpoint
+
 router.get('/', async (req, res) => {
   try {
     const customerData = await getCustomers();
