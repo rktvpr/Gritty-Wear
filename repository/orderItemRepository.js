@@ -29,4 +29,11 @@ async function deleteOrderItem(id){
         where: {id: id}
     })
 }
-module.exports = {getOrderItems, createOrderItem, getOrderItem, updateOrderItem, deleteOrderItem}
+
+async function deleteOrderItemByCustomerOrder(CustomerOrderId){
+    await Order_item.destroy({
+        where: {order_id: CustomerOrderId}
+    })
+}
+
+module.exports = {getOrderItems, createOrderItem, getOrderItem, updateOrderItem, deleteOrderItem, deleteOrderItemByCustomerOrder}

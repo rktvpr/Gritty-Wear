@@ -10,6 +10,14 @@ Order_item.init(
             primaryKey: true,
             autoIncrement: true,
         },
+        order_id: {
+            type: DataTypes.INTEGER,
+            allowNUll: false,
+            references: {
+                model: 'customer-order',
+                key: 'id',
+            },
+        },
         total: {
             type: DataTypes.DECIMAL,
             allowNUll: false,
