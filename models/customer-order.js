@@ -14,20 +14,12 @@ Customer_order.init(
             type: DataTypes.INTEGER,
             allowNUll: false,
             references: {
-<<<<<<< HEAD
-                model: 'Order_item',
-=======
                 model: 'customer',
->>>>>>> 61d38fc7789f94f68cc76212ddf2d7d2f53f4857
                 key: 'id',
             },
         },
         purchase_date: {
-<<<<<<< HEAD
-            type: DataTypes.DATE,
-=======
             type: DataTypes.DATEONLY,
->>>>>>> 61d38fc7789f94f68cc76212ddf2d7d2f53f4857
             allowNUll: false,
         },
         o_status: {
@@ -40,11 +32,7 @@ Customer_order.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-<<<<<<< HEAD
-        modelName: 'product',
-=======
         modelName: 'customer_order',
->>>>>>> 61d38fc7789f94f68cc76212ddf2d7d2f53f4857
     }
 );
 

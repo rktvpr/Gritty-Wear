@@ -24,19 +24,6 @@ CREATE TABLE customer (
     PRIMARY KEY (id)
 );
 
-<<<<<<< HEAD
-CREATE TABLE order_item (
-    id VARCHAR(36) NOT NULL,
-    total DECIMAL NOT NULL,
-    quantity INT NOT NULL,
-    product_id INT NOT NULL,
-    size VARCHAR(2) NOT NULL,
-    PRIMARY KEY (id),
-    FOREIGN KEY (product_id) REFERENCES product(id)
-);
-
-=======
->>>>>>> 61d38fc7789f94f68cc76212ddf2d7d2f53f4857
 CREATE TABLE customer_order (
     id INT auto_increment NOT NULL,
     customer_id INT NOT NULL,
@@ -44,8 +31,6 @@ CREATE TABLE customer_order (
     o_status VARCHAR(50) NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (customer_id) REFERENCES customer(id)
-<<<<<<< HEAD
-=======
 );
 
 CREATE TABLE order_item (
@@ -58,5 +43,4 @@ CREATE TABLE order_item (
     PRIMARY KEY (id),
     FOREIGN KEY (product_id) REFERENCES product(id),
     FOREIGN KEY (order_id) REFERENCES customer_order(id)
->>>>>>> 61d38fc7789f94f68cc76212ddf2d7d2f53f4857
 );

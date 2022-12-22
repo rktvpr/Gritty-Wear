@@ -3,14 +3,7 @@ const controllers = require('./controllers');
 const sequelize = require('./config/connection')
 const path = require('path')
 const exphbs = require('express-handlebars')
-const controllers = require('./controllers');
-const sequelize = require('./config/connection')
-const path = require('path')
-const exphbs = require('express-handlebars')
 const app = express();
-const PORT = process.env.PORT || 3000;
-const hbs = exphbs.create()
-
 const PORT = process.env.PORT || 3000;
 const hbs = exphbs.create()
 
@@ -27,7 +20,7 @@ const hbs = exphbs.create()
 //     shipping_address_collection: {
 //       allowed_countries: ['US', 'CA'],
 //     },
-
+    
 //      line_items: [
 //       {
 //         // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
@@ -43,26 +36,8 @@ const hbs = exphbs.create()
 
 //   res.redirect(303, session.url);
 // });
-
+    
 // handlebars middleware setup
-const sess = {
-  secret: 'Super secret secret',
-  cookie: {
-    maxAge: 60 * 60 * 1000,
-    httpOnly: true,
-    secure: false,
-    sameSite: 'strict',
-  },
-  resave: false,
-  saveUninitialized: true,
-
-  store: new SequelizeStore({
-    db: sequelize,
-  }),
-};
-
-app.use(session(sess));
-
 app.engine('handlebars', hbs.engine)
 app.set('view engine', 'handlebars')
 app.use(express.json());

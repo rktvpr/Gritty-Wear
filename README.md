@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-# Project-2-Repo
-A base layout repo until we figure out what our plan is for project 2
-
-
-## Description
-
-
-
-## Tech Used
-
-
-
-## Contributors
-* 
-* 
-* 
-* 
-
-
-
-## License
-MIT License
-=======
 # Gritty Wear
 For the best Gritty merch!🎆
 
@@ -54,4 +30,3 @@ Come shop at Gritty Wear for the best Gritty gear. Checkout is completed securel
 
 ## License
 [MIT License](https://github.com/rktvpr/Gritty-Wear/blob/main/LICENSE)
->>>>>>> 61d38fc7789f94f68cc76212ddf2d7d2f53f4857
