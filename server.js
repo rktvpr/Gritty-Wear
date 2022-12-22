@@ -1,11 +1,11 @@
 const express = require('express');
 const controllers = require('./controllers');
-const sequelize = require('./config/connection')
-const path = require('path')
-const exphbs = require('express-handlebars')
+const sequelize = require('./config/connection');
+const path = require('path');
+const exphbs = require('express-handlebars');
 const app = express();
 const PORT = process.env.PORT || 3000;
-const hbs = exphbs.create()
+const hbs = exphbs.create();
 // Stripe test secret API key.
 const stripe = require('stripe')('sk_test_51MG6uQDLDUN8zeUqW7DTgO0KCA4oZZfgYrT6TejIgz4j5YPgCpzge9RKFUFP4Li9DxJXQ5atM10L0zAec4SGi0Qn00idlFWD64');
 // https://stripe.com/docs/payments/checkout/discounts and couponID is taQNop5R
@@ -31,12 +31,12 @@ const stripe = require('stripe')('sk_test_51MG6uQDLDUN8zeUqW7DTgO0KCA4oZZfgYrT6T
 
 // app.use(session(sess));
 // handlebars middleware setup
-app.engine('handlebars', hbs.engine)
-app.set('view engine', 'handlebars')
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // set static folder
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(controllers);
 
 // handlebars routes
