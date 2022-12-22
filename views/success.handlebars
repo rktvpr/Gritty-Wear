@@ -1,6 +1,51 @@
-<section>
-    <p>
-      We appreciate your business! If you have any questions, please email
-      <a href="mailto:orders@grittywear.com">orders@grittywear.com</a>.
-    </p>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Gritty Wear Order Confirmation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+    </style>
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+
+<body>
+    <div class="container d-flex h-100 p-3 mx-auto flex-column">
+        <header class="masthead-brand">
+            <div class="inner">
+                <h1 class="masthead-brand"><a class="nav-link" href="/products">Gritty Wear</a></h1>
+            </div>
+        </header>
+        <div class="row text-center">
+            <div class="checkout-success col align-self-center" style="margin-top: 3em;">
+                <div class="">
+                    <h2>Gritty thanks you for your order!</h5>
+                    <p>If you have any questions, please email <a
+                            href="mailto:orders@grittywear.com">orders@grittywear.com</a>
+                    </p>
+                </div>
+                <div class="">
+                    <img src="../assets/images/grittyhey.jpg" width="100%" alt="Gritty saying hi">
+                    <a class="nav-link active" href="/index">Back to home</a>
+                </div>
+            </div>
+        </div>
+        {{> footer}}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
