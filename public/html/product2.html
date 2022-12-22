@@ -17,6 +17,12 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
     </style>
+<<<<<<< HEAD
+=======
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+>>>>>>> 61d38fc7789f94f68cc76212ddf2d7d2f53f4857
     <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
     <script src="https://js.stripe.com/v3/"></script>
 </head>
@@ -24,6 +30,7 @@
 <body>
     <div class="container d-flex h-100 p-3 mx-auto flex-column">
         <header class="masthead">
+<<<<<<< HEAD
             <div class="inner">
                 <h1 class="masthead-brand">Gritty Wear</h1>
                 <nav class="nav nav-masthead justify-content-center">
@@ -31,6 +38,28 @@
                     <a class="nav-link" href="products.html">Products</a>
                     <a class="nav-link" href="cart.html">Cart</a>
                 </nav>
+=======
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col flex-shrink-1 d-flex align-self-center justify-content-center">
+                        <img src="../assets/images/hot-dog.png" style="height:100px; border:solid 1px;" alt="logo" />
+                    </div>
+                    <div class="col d-flex align-self-center justify-content-center">
+                        <div class="logo text-center">
+                            <a href="index.html" title="Gritty Wear"><h1>Gritty Wear</h1></a>
+                        </div>
+                    </div>    
+                    <div class="col d-flex align-self-center">
+                        <nav class="navbar nav-masthead justify-content-center">
+                            <a class="h5 nav-link" href="index.html">Home</a>
+                            <a class="h5 nav-link active" href="products.html">Products</a>
+                            <a class="h5 nav-link" href="cart.html">Cart <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                              </svg></a>
+                        </nav>
+                    </div>
+                </div>
+>>>>>>> 61d38fc7789f94f68cc76212ddf2d7d2f53f4857
             </div>
         </header>
 
@@ -50,6 +79,31 @@
                     <h4><span class="currency_sign">$</span>24.00</h4>
                     <section class="description">
                         <p>Rep the best mascot in the land for your tot with the Gritty Toddler T-Shirt (this is actually purchasable at <a href="https://www.philadelphiaindependents.com/shop/gritty-toddler-t-shirt">Philadelphia Independents</a>)</p>
+<<<<<<< HEAD
+=======
+                        <div class="product-variant">
+                            <label class="product-option">Size: </label>
+                            <select class="product-size-container" id="product-size">
+                                <option class="product-size-value" value="XS" selected="">
+                                    XS
+                                </option>
+                                <option class="product-size-value" value="S" selected="">
+                                    S
+                                </option>
+                                <option class="product-size-value" value="M">
+                                    M
+                                </option>
+                                <option class="product-size-value" value="L">
+                                    L
+                                </option>
+                                <option class="product-size-value" value="XL">
+                                    XL
+                                </option>
+                            </select>
+                            <input id="form1" min="0" name="quantity" value="1" type="number"
+                                class="form-control form-control-sm">
+                        </div>
+>>>>>>> 61d38fc7789f94f68cc76212ddf2d7d2f53f4857
                     </section>
                     <form action="/create-checkout-session" method="POST">
                         <button type="submit" id="checkout-button">Checkout</button>
