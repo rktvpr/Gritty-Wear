@@ -1,4 +1,8 @@
 const router = require('express').Router();
+<<<<<<< HEAD
+const { Product, Category, Tag, ProductTag } = require('../../models');
+=======
+>>>>>>> 61d38fc7789f94f68cc76212ddf2d7d2f53f4857
 const { getProducts, createProduct, getProduct, updateProduct, deleteProduct } = require("../../repository/productRepository")
 
 // The `/api/products` endpoint
@@ -29,7 +33,11 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     await createProduct(req.body);
+<<<<<<< HEAD
+    res.status(201);
+=======
     res.status(201).send();
+>>>>>>> 61d38fc7789f94f68cc76212ddf2d7d2f53f4857
   } catch(err) {
     res.status(500).json(err);
   }
