@@ -2,9 +2,10 @@ const router = require('express').Router();
 const { getCustomerOrder, createCustomerOrder, getCustomerOrders, updateCustomerOrder, deleteCustomerOrder } = require("../../repository/customerOrderRepository")
 
 // The `/api/products` endpoint
-router.get('/', async (req, res) => {
+router.get('/:customerId/orders', async (req, res) => {
   try {
-    const customerOrdersData = await getCustomerOrders();
+    console.log(req.params)
+    const customerOrdersData = await getCustomerOrders(req.params.customerId);
     res.status(200).json(customerOrdersData);
   } catch (err) {
     console.log(err);
@@ -12,9 +13,9 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:customerId/orders/:orderId', async (req, res) => {
   try {
-    const customerOrderById = await getCustomerOrder(req.params.id);
+    const customerOrderById = await getCustomerOrder(req.params.customerId, req.params.orderId);
     if (!customerOrderById) {
       res.status(404).json({ message: 'No customer order found with that id!' });
       return;
@@ -22,14 +23,15 @@ router.get('/:id', async (req, res) => {
     res.status(200).json(customerOrderById);
 
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });
 
-router.post('/', async (req, res) => {
+router.post('/:customerId/orders', async (req, res) => {
   try {
     await createCustomerOrder(req.body);
-    res.status(201);
+    res.status(201).send();
   } catch(err) {
     res.status(500).json(err);
   }
@@ -37,9 +39,9 @@ router.post('/', async (req, res) => {
 });
 
 
-router.put('/:id', async (req, res) => {
+router.put('/:customerId/orders/:orderId', async (req, res) => {
   try {
-    const existingOrder = await getCustomerOrder(req.params.id);
+    const existingOrder = await getCustomerOrder(req.params.id, req.params.orderId);
     if (!existingOrder) {
       res.status(404).json({ message: 'No customer order found with that id!' });
       return;
@@ -52,7 +54,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:customerId/orders/:orderId', async (req, res) => {
   try {
     const delCustomerOrder = await getCustomerOrder(req.params.id);
     if (!delCustomerOrder) {

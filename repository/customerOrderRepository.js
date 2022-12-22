@@ -1,15 +1,22 @@
 const  CustomerOrder  = require('../models/customer-order');
 
-async function getCustomerOrders(){
-    return await CustomerOrder.findAll();
+async function getCustomerOrders(customerId){
+    return await CustomerOrder.findAll({
+        where: {customer_id: customerId}
+    });
 }
 
 async function createCustomerOrder(customerOrder){
     await CustomerOrder.create(customerOrder);
 }
 
-async function getCustomerOrder(id){
-    return await CustomerOrder.findByPk(id);
+async function getCustomerOrder(customerId, orderId){
+    return await CustomerOrder.findAll({
+        where: {
+            customer_id: customerId,
+            id: orderId
+        }
+    });
 }
 
 async function updateCustomerOrder(customerOrder, id){

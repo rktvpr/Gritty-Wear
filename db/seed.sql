@@ -11,14 +11,14 @@ VALUES ("Rick", "Welte", "rickExample@fakeWebsite.com", "fakepass1"),
        ("Rahsan", "Lewis", "rahsanExample@fakeWebsite.com", "fakepass3"),
        ("Anne", "Panagotopulos", "anneExample@fakeWebsite.com", "fakepass3");
 
-INSERT INTO order_item (total, quantity, product_id, size)
-VALUES (72.00, 3, 1, "S"),
-       (66.00, 2, 2, "M"),
-       (85.00, 4, 3, "L"),
-       (70.00, 4, 4, "XL");
-
 INSERT INTO customer_order (customer_id, purchase_date, o_status)
 VALUES (1, "2022-01-17", "pending"),
        (2, "2022-04-10", "delivered"),
        (3, "2022-12-12", "canceled"),
        (4, "2022-10-22", "shipped");
+
+INSERT INTO order_item (total, quantity, order_id, product_id, size)
+VALUES (72.00, 3, 1, 1, "S"),
+       (66.00, 2, 2, 2, "M"),
+       (85.00, 4, 3, 3, "L"),
+       (70.00, 4, 4, 3, "XL");
