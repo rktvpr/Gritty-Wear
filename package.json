@@ -1,7 +1,7 @@
 {
-  "name": "potluck-party",
+  "name": "gritty-wear",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Gritty merch store",
   "main": "server.js",
   "scripts": {
     "seeds": "node seeds/index.js"
