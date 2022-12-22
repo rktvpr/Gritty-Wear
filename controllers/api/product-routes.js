@@ -29,7 +29,7 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     await createProduct(req.body);
-    res.status(201);
+    res.status(201).send();
   } catch(err) {
     res.status(500).json(err);
   }
