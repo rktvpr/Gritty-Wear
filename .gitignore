@@ -68,6 +68,9 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
+# Stripe keys
+keys_dev.js
+
 # dotenv environment variables file
 .env
 .env.test
