@@ -10,8 +10,6 @@ Order_item.init(
             primaryKey: true,
             autoIncrement: true,
         },
-<<<<<<< HEAD
-=======
         order_id: {
             type: DataTypes.INTEGER,
             allowNUll: false,
@@ -20,7 +18,6 @@ Order_item.init(
                 key: 'id',
             },
         },
->>>>>>> 61d38fc7789f94f68cc76212ddf2d7d2f53f4857
         total: {
             type: DataTypes.DECIMAL,
             allowNUll: false,
@@ -33,11 +30,7 @@ Order_item.init(
             type: DataTypes.INTEGER,
             allowNUll: false,
             references: {
-<<<<<<< HEAD
-                model: 'Customer',
-=======
                 model: 'Product',
->>>>>>> 61d38fc7789f94f68cc76212ddf2d7d2f53f4857
                 key: 'id',
             },
         },

@@ -1,8 +1,4 @@
 const Product = require('./product')
-<<<<<<< HEAD
-
-module.exports = {Product}
-=======
 const Customer = require('./customer')
 const Customer_order = require('./customer-order')
 const Order_item = require('./order-item')
@@ -55,4 +51,3 @@ Customer_order.hasMany(Order_item, {
 
 
 module.exports = {Product, Customer, Customer_order, Order_item}
->>>>>>> 61d38fc7789f94f68cc76212ddf2d7d2f53f4857
