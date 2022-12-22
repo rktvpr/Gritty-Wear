@@ -3,9 +3,14 @@ const controllers = require('./controllers');
 const sequelize = require('./config/connection')
 const path = require('path')
 const exphbs = require('express-handlebars')
+const controllers = require('./controllers');
+const sequelize = require('./config/connection')
+const path = require('path')
+const exphbs = require('express-handlebars')
 const app = express();
 const PORT = process.env.PORT || 3000;
 const hbs = exphbs.create()
+
 
 // Stripe test secret API key.
 // const stripe = require('stripe')('sk_test_51MG6uQDLDUN8zeUqW7DTgO0KCA4oZZfgYrT6TejIgz4j5YPgCpzge9RKFUFP4Li9DxJXQ5atM10L0zAec4SGi0Qn00idlFWD64');
@@ -20,7 +25,7 @@ const hbs = exphbs.create()
 //     shipping_address_collection: {
 //       allowed_countries: ['US', 'CA'],
 //     },
-    
+
 //      line_items: [
 //       {
 //         // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
@@ -36,8 +41,26 @@ const hbs = exphbs.create()
 
 //   res.redirect(303, session.url);
 // });
-    
+
 // handlebars middleware setup
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {
+    maxAge: 60 * 60 * 1000,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'strict',
+  },
+  resave: false,
+  saveUninitialized: true,
+
+  store: new SequelizeStore({
+    db: sequelize,
+  }),
+};
+
+app.use(session(sess));
+
 app.engine('handlebars', hbs.engine)
 app.set('view engine', 'handlebars')
 app.use(express.json());
