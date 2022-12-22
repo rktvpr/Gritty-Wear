@@ -46,6 +46,14 @@ app.get('/products', (req, res) => {
   res.render('allproducts');
 });
 
+app.get('/success', (req, res) => {
+  res.render('success');
+});
+
+app.get('/cancel', (req, res) => {
+  res.render('cancel');
+});
+
 // app.post('/create-checkout-session', async (req, res) => {
 //   const session = await stripe.checkout.sessions.create({
 //     customer_email: 'customer@example.com',
