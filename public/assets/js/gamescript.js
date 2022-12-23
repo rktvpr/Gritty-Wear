@@ -1,5 +1,5 @@
 function myfunction() {
-    var user = prompt('Choose rock, paper or scissors')
+    var user = prompt('Choose rock, paper, or scissors')
     var computer, ran
     var ran = Math.floor(Math.random() * 3)
     if (ran == 1) {
@@ -48,3 +48,7 @@ function game(computer, user) {
     //     alert('Gritty chose ' + computer + " Sorry! no discount code")
     // }
 }
+
+document.querySelector("#gamebutton").addEventListener('click', function(event) {
+    myfunction()
+});

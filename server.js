@@ -1,6 +1,8 @@
 const express = require('express');
 const controllers = require('./controllers');
+const session = require('express-session');
 const sequelize = require('./config/connection');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const path = require('path');
 const exphbs = require('express-handlebars');
 const app = express();
@@ -13,23 +15,23 @@ const stripe = require('stripe')('sk_test_51MG6uQDLDUN8zeUqW7DTgO0KCA4oZZfgYrT6T
 
 
 // cookies
-// const sess = {
-//   secret: 'Super secret secret',
-//   cookie: {
-//     maxAge: 60 * 60 * 1000,
-//     httpOnly: true,
-//     secure: false,
-//     sameSite: 'strict',
-//   },
-//   resave: false,
-//   saveUninitialized: true,
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {
+    maxAge: 60 * 60 * 1000,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'strict',
+  },
+  resave: false,
+  saveUninitialized: true,
 
-//   store: new SequelizeStore({
-//     db: sequelize,
-//   }),
-// };
+  store: new SequelizeStore({
+    db: sequelize,
+  }),
+};
 
-// app.use(session(sess));
+app.use(session(sess));
 // handlebars middleware setup
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
@@ -56,7 +58,9 @@ app.get('/product3', (req, res) => {
   res.render('product3');
 });
 app.get('/gamepage', (req, res) => {
-  res.render('gamepage');
+  res.render('game', {
+    layout: 'gamepage'
+  });
 });
 app.get('/checkout', (req, res) => {
   res.render('checkout');
